@@ -1,1 +1,1 @@
-Binomial Expansion
+BinomialExpansion
