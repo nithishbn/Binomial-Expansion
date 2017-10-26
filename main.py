@@ -85,12 +85,12 @@ class Expander:
     def binomialExpand(self):
         result = ""
         j = 0
-        for i in range(int(self.exponent), 0, -1):
+        for i in range(int(self.exponent)+1, 0, -1):
             ncr = self.ncr(i, j)
             multiplied = ncr * pow(self.constant, i) * pow(self.xValue, j)
             multiplied = Fraction(multiplied)
             if i == int(self.exponent):
-                result += str("{value}x^{exponent}".format(value=multiplied, exponent=j))
+                result += str("{value}".format(value=multiplied))
             else:
                 result += str("+{value}x^{exponent}".format(value=multiplied, exponent=j))
             j += 1
